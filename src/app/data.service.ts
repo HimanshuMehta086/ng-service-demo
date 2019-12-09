@@ -4,18 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root' //  application-wide singleton
 })
 export class DataService {
-  constructor() {
-    //  This service will not be part of the app bundle
-    //  unless it is used. As such no component asks for
-    //  this service in constructor, we do not see this log
+  private mCounter = 0;
 
-    //  This is because, Angular builders now take the
-    //  'Tree Shakeable Provider' approach. This means,
-    //  Before bundling, the tree-shaking is done to ensure
-    //  unused code is taken away from the bundle
-    //  This goes by import commands in various files.
-    //  providedIn: 'root' is the configuration for Angular
-    //  DI system.
-    console.log('service created');
+  constructor() {}
+
+  get counter(): number {
+    return this.mCounter;
+  }
+
+  set counter(val: number) {
+    if (val > 0) {
+      this.mCounter = val;
+    } else {
+      console.log('Unacceptable value');
+    }
   }
 }
