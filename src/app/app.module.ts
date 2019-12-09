@@ -7,9 +7,17 @@ import { VenusComponent } from './venus/venus.component';
 import { EarthComponent } from './earth/earth.component';
 import { MarsComponent } from './mars/mars.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DataService } from './data.service';
 
 @NgModule({
-  declarations: [AppComponent, MercuryComponent, VenusComponent, EarthComponent, MarsComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    MercuryComponent,
+    VenusComponent,
+    EarthComponent,
+    MarsComponent,
+    NavbarComponent
+  ],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
