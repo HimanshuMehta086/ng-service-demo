@@ -7,7 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./mercury.component.css']
 })
 export class MercuryComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(public dataService: DataService) {}
 
   ngOnInit() {}
+
+  handler() {
+    this.dataService.counter = 1;
+  }
 }

@@ -7,7 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./mars.component.css']
 })
 export class MarsComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(public dataService: DataService) {}
 
   ngOnInit() {}
+
+  handler() {
+    this.dataService.counter = 4;
+  }
 }

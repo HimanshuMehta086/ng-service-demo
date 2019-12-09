@@ -7,7 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./venus.component.css']
 })
 export class VenusComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(public dataService: DataService) {}
 
   ngOnInit() {}
+
+  handler() {
+    this.dataService.counter = 2;
+  }
 }

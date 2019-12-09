@@ -7,7 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./earth.component.css']
 })
 export class EarthComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(public dataService: DataService) {}
 
   ngOnInit() {}
+
+  handler() {
+    this.dataService.counter = 3;
+  }
 }
